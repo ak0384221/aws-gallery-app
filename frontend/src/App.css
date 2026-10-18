@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #202b27;
+  background: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page {
+  width: min(100% - 40px, 1080px);
+  margin: 0 auto;
+}
+
+.page-header {
+  padding: 30px 0 20px;
+  border-bottom: 1px solid #e1e7e3;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 27px;
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-size: 19px;
+}
+
+.upload-section {
+  max-width: 480px;
+  padding: 24px 0 28px;
+  border-bottom: 1px solid #e1e7e3;
+}
+
+.upload-form {
+  display: grid;
+  gap: 10px;
+}
+
+.field-label {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input[type="file"],
+input[type="text"] {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px;
+  border: 1px solid #b9c5be;
+  border-radius: 4px;
+  background: #fff;
+}
+
+input[type="file"] {
+  padding: 6px;
+}
+
+.preview {
+  width: min(100%, 280px);
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+button {
+  width: fit-content;
+  min-height: 36px;
+  padding: 7px 12px;
+  border: 1px solid #247456;
+  border-radius: 4px;
+  color: #fff;
+  background: #247456;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #1b5e45;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.upload-button {
+  margin-top: 4px;
+}
+
+.error-message {
+  margin-top: 12px;
+  color: #a52222;
+  font-size: 14px;
+}
+
+.gallery-section {
+  padding: 24px 0 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.image-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e1e7e3;
+  border-radius: 5px;
+}
+
+.image-card > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: #f0f3f1;
+}
+
+.image-card-footer {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px;
+}
+
+.image-card-footer p {
+  overflow-wrap: anywhere;
+  font-size: 14px;
+}
+
+.image-card-footer button {
+  flex: 0 0 auto;
+  min-height: 30px;
+  padding: 4px 8px;
+  border-color: #b9c5be;
+  color: #34443c;
+  background: #fff;
+  font-size: 13px;
+}
+
+.image-card-footer button:hover {
+  background: #f0f3f1;
+}
+
+.empty-message {
+  color: #59675f;
+}
+
+@media (max-width: 480px) {
+  .page {
+    width: min(100% - 28px, 1080px);
+  }
+
+  .page-header {
+    padding-top: 22px;
+  }
+}
